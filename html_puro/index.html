@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiraje Inteligente — Cotiza en 2 minutos por WhatsApp</title>
+  <meta name="description" content="Presencia digital con IA para imprentas. Anuncios + mini‑landing + WhatsApp. Cotizaciones listas para cerrar." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="cmyk"><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div></div>
+  <header>
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="logo serif">TI</div>
+        <div class="serif" style="font-size:18px">Tiraje Inteligente</div>
+      </div>
+      <nav class="hide-mobile">
+        <a href="#demo">Demo</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="btn btn-primary" onclick="openWA('Hola, me interesa empezar.')">Hablar por WhatsApp</button>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap g2 grid" style="align-items:center">
+      <div>
+        <h1 class="hero-title serif">Cotiza tu tiraje en <span class="accent">2 minutos</span> por WhatsApp.</h1>
+        <p class="muted" style="max-width:560px;margin-top:12px">Anuncios + mini‑landing + IA que califica y te entrega cotizaciones listas para cerrar. Presencia digital profesional para imprentas, rotuladoras y gran formato.</p>
+        <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:10px">
+          <button class="btn btn-primary" onclick="openWA('Quiero cotizar ahora — vengo desde la landing.')">Cotizar por WhatsApp</button>
+          <a class="btn btn-ghost" href="#demo">Ver demo</a>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap" class="small">
+          <span class="badge">Offset MX</span>
+          <span class="badge">Plotter & Co.</span>
+          <span class="badge">Impresión Rápida</span>
+          <span class="badge">Serigrafía Local</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="small" style="text-align:right">mini‑landing • preview</div>
+        <div class="portfolio-box"></div>
+        <div class="grid g3" style="margin-top:10px">
+          <div class="card" style="padding:10px"><div><b>Tarjetas</b></div><div class="small">Desde $ • 24–72 h</div></div>
+          <div class="card" style="padding:10px"><div><b>Flyers</b></div><div class="small">Desde $ • 24–72 h</div></div>
+          <div class="card" style="padding:10px"><div><b>Lonas</b></div><div class="small">Desde $ • 24–72 h</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#0E1013;border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12">
+    <div class="wrap grid g2">
+      <div class="card">
+        <h3 class="serif" style="font-size:24px;margin:0 0 6px">Tu mejor vendedor está desocupado</h3>
+        Falta un sistema que active tu <b>WhatsApp 24/7</b>. Los pedidos se ganan por rapidez y claridad: precio desde, tiempo de entrega y acabados en un solo chat.
+      </div>
+      <div class="card">
+        <h3 class="serif" style="font-size:24px;margin:0 0 6px">Oportunidad medible</h3>
+        Enfocamos tráfico a una mini‑landing con IA que califica (tiraje, tamaño, acabado, tiempo) y convierte <b>visitas → conversaciones → cotizaciones</b>.
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" style="background:#0E1013;border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12">
+    <div class="wrap g2 grid" style="align-items:start">
+      <form class="card" onsubmit="sendForm(event)">
+        <h2 class="serif" style="font-size:28px;margin:0 0 10px">Demo interactiva</h2>
+        <p class="muted" style="margin-top:-4px">Simula tu cotización y abre WhatsApp con los datos prellenados.</p>
+        <div class="grid g2" style="margin-top:14px">
+          <label>¿Qué necesitas?
+            <select id="service" class="input">
+              <option>Tarjetas</option>
+              <option>Flyers</option>
+              <option>Lonas</option>
+              <option>Serigrafía</option>
+              <option>Vinil/Rotulación</option>
+              <option>Otro</option>
+            </select>
+          </label>
+          <label>Tiraje
+            <select id="tiraje" class="input">
+              <option>100</option><option>250</option><option selected>500</option><option>1000</option><option>2000</option>
+            </select>
+          </label>
+          <label>Tamaño
+            <select id="tamano" class="input">
+              <option selected>9×5 cm</option><option>Carta</option><option>Tabloide</option><option>Oficio</option><option>Personalizado</option>
+            </select>
+          </label>
+          <label>Acabado
+            <select id="acabado" class="input">
+              <option selected>Laminado mate</option><option>Brillo</option><option>UV</option><option>Sin acabado</option>
+            </select>
+          </label>
+          <label>Urgencia
+            <select id="urgencia" class="input">
+              <option>Hoy</option><option>24h</option><option selected>48h</option><option>Esta semana</option>
+            </select>
+          </label>
+          <label>Tu nombre (opcional)
+            <input id="nombre" class="input" placeholder="Ej. Ana López" />
+          </label>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+          <button class="btn btn-primary" type="submit">Abrir WhatsApp con mi cotización</button>
+          <button class="btn btn-ghost" type="button" onclick="openWA('Quiero información del plan — Esencial/Impulso/Premium (vengo desde la demo).')">Pedir info de planes</button>
+        </div>
+        <div class="small" style="margin-top:6px">* El mensaje se abrirá en WhatsApp y podrás editarlo antes de enviar.</div>
+      </form>
+      <div class="grid">
+        <div class="metric"><div><div class="small">Conversaciones/mes</div><div class="serif" style="font-size:28px">60–120</div></div><div style="width:40px;height:40px;border-radius:50%;background:var(--cyan)"></div></div>
+        <div class="metric"><div><div class="small">Tiempo de respuesta</div><div class="serif" style="font-size:28px">≤ 5 min</div></div><div style="width:40px;height:40px;border-radius:50%;background:var(--cyan)"></div></div>
+        <div class="metric"><div><div class="small">Cotizaciones/mes</div><div class="serif" style="font-size:28px">30–50</div></div><div style="width:40px;height:40px;border-radius:50%;background:var(--cyan)"></div></div>
+        <div class="card">
+          <div class="serif" style="font-size:18px">Checklist de archivos correctos</div>
+          <ul class="muted" style="margin:8px 0 0 18px">
+            <li>Resolución 300 dpi</li>
+            <li>Sangrado 3 mm en cada lado</li>
+            <li>Formato PDF/PNG/TIFF</li>
+            <li>Fuentes convertidas a curvas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paquetes">
+    <div class="wrap">
+      <h2 class="serif" style="font-size:32px;margin:0 0 16px">Paquetes y garantía</h2>
+      <div class="grid g3">
+        <div class="card">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div class="serif" style="font-size:22px">Esencial</div>
+            <div style="text-align:right"><div class="small">MXN/mes</div><div class="serif" style="font-size:28px">$1,500</div></div>
+          </div>
+          <ul class="muted" style="margin:10px 0 0 18px">
+            <li><span class="price-dot"></span> 12 posts/mes</li>
+            <li><span class="price-dot"></span> WhatsApp Business optimizado</li>
+            <li><span class="price-dot"></span> 1 campaña Clic→WhatsApp</li>
+          </ul>
+          <button class="btn btn-primary" style="width:100%;margin-top:14px" onclick="openWA('Quiero el plan Esencial.')">Elegir plan</button>
+        </div>
+        <div class="card" style="outline:2px solid #ffffff33">
+          <div style="position:absolute;margin-top:-28px;right:32px" class="small">Recomendado</div>
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div class="serif" style="font-size:22px">Impulso</div>
+            <div style="text-align:right"><div class="small">MXN/mes</div><div class="serif" style="font-size:28px">$3,500</div></div>
+          </div>
+          <ul class="muted" style="margin:10px 0 0 18px">
+            <li><span class="price-dot"></span> Todo lo del Esencial</li>
+            <li><span class="price-dot"></span> A/B testing de anuncios</li>
+            <li><span class="price-dot"></span> Calendario 4 semanas + flujo IA</li>
+          </ul>
+          <button class="btn btn-primary" style="width:100%;margin-top:14px" onclick="openWA('Quiero el plan Impulso.')">Elegir plan</button>
+        </div>
+        <div class="card">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div class="serif" style="font-size:22px">Premium</div>
+            <div style="text-align:right"><div class="small">MXN/mes</div><div class="serif" style="font-size:28px">$6,500</div></div>
+          </div>
+          <ul class="muted" style="margin:10px 0 0 18px">
+            <li><span class="price-dot"></span> Todo lo del Impulso</li>
+            <li><span class="price-dot"></span> Mini‑landing a medida</li>
+            <li><span class="price-dot"></span> 2 creativos extra/semana + reporte semanal</li>
+          </ul>
+          <button class="btn btn-primary" style="width:100%;margin-top:14px" onclick="openWA('Quiero el plan Premium.')">Elegir plan</button>
+        </div>
+      </div>
+      <p class="small" style="margin-top:10px"><b>Garantía de actividad:</b> si en 30 días no generamos <i>N</i> conversaciones, trabajamos la segunda mitad del mes sin costo.</p>
+    </div>
+  </section>
+
+  <section id="contacto" style="background:#0E1013;border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12;text-align:center">
+    <div class="wrap">
+      <h2 class="serif" style="font-size:32px">¿Listo para cotizar en 2 minutos por WhatsApp y vender hoy mismo?</h2>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="openWA('Quiero agendar una demo.')">Agendar demo</button>
+        <button class="btn btn-ghost" onclick="openWA('Quiero cotizar ahora mismo.')">Cotizar ahora</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap" style="padding:28px 0">
+      <div class="grid g2">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px"><div class="logo serif">TI</div><div class="serif">Tiraje Inteligente</div></div>
+          <p class="small" style="margin-top:8px">Presencia digital impulsada por IA para imprentas. Cotiza por WhatsApp en 2 minutos.</p>
+        </div>
+        <div class="small" style="text-align:right;display:grid;gap:6px;justify-items:end">
+          <div>WhatsApp: +52 56 6520 7580</div>
+          <div>Zona: Chicoloapan y alrededores</div>
+          <div>Horario: Lun–Sáb 9:00–18:00</div>
+        </div>
+      </div>
+      <div class="small" style="border-top:1px solid #ffffff12;margin-top:14px;padding-top:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <div>© <span id="year"></span> Tiraje Inteligente. Todos los derechos reservados.</div>
+        <div style="display:flex;gap:10px"><span>Privacidad</span><span>Términos</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-wa" title="WhatsApp" href="#" onclick="openWA('Hola, vengo desde el botón flotante.');return false;" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M20.52 3.48A11.92 11.92 0 0 0 12.05 0C5.46.03.13 5.36.16 11.94c.01 2.1.56 4.15 1.6 5.96L0 24l6.28-1.71a11.94 11.94 0 0 0 5.79 1.49h.05c6.58-.03 11.91-5.36 11.94-11.95A11.9 11.9 0 0 0 20.52 3.48Zm-8.48 18.5h-.04a9.95 9.95 0 0 1-5.07-1.39l-.36-.21-3.73 1.02 1-3.64-.24-.37a9.96 9.96 0 0 1-1.55-5.32C2.02 6.46 6.47 2 12.04 2h.04C17.6 1.98 22.04 6.42 22.02 12c-.02 5.56-4.55 10-11 10Zm5.77-7.48c-.31-.16-1.83-.91-2.12-1.02-.29-.11-.5-.17-.7.16-.21.32-.81 1-1 1.21-.18.21-.37.24-.68.08-.32-.16-1.33-.49-2.54-1.56-.94-.83-1.58-1.86-1.77-2.17-.19-.32-.02-.49.14-.65.15-.15.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.39-.03-.55-.08-.16-.7-1.68-.96-2.29-.25-.6-.51-.52-.7-.53-.18-.01-.39-.01-.6-.01-.21 0-.55.08-.83.39-.29.32-1.1 1.07-1.1 2.6 0 1.53 1.13 3.01 1.29 3.22.16.21 2.21 3.37 5.35 4.72 3.14 1.35 3.14.9 3.71.84.58-.05 1.83-.75 2.09-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.6-.37Z"/></svg>
+  </a>
+
+  <script src="./script.js"></script>
+</body>
+</html>
